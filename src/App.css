@@ -1,0 +1,84 @@
+@import './styles/Parent.css';
+@import './styles/Student.css';
+@import './styles/Alumni.css';
+@import './styles/InfoSection.css';
+@import './styles/Employee.css';
+
+body{
+  background-color: var(--alice-blue) !important;
+}
+
+.header-container{
+  border-radius:10px;
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(to right,#1a65dc,#6592db,#1a65dc);
+  color: white;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.header-logo{
+  width: 20%;
+  height: 100%;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 30%;
+  height: auto;
+  display: block;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.label {
+  color: #2b6cb0; 
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+}
+
+.bottom-container {
+display: flex;
+  /* Equal width for both boxes */
+  gap: 15px;               
+  padding: 10px 20px;
+
+  align-items: flex-start; 
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  background: linear-gradient(to right,#1a65dc,#6592db,#1a65dc);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}

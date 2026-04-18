@@ -1,0 +1,81 @@
+
+
+
+.news-box {
+  flex: 1;
+}
+
+.spotlight-box {
+  flex: 1;
+
+}
+
+.info-box {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: fit-content;
+}
+
+.box-header {
+  background-color: #f8f9fa;
+  padding: 12px 20px;
+  color: #800000; /* Maroon color from image */
+  font-weight: bold;
+  border-top: 4px solid #6c2405;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-content {
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  gap: 15px;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.shield-icon {
+  color: #d4af37; /* Gold color */
+  font-size: 1.2rem;
+}
+
+.bolt-icon {
+  color: #800000;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.item-text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.more-link {
+  text-decoration: none;
+  color: #900c3f;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+.spotlight-link {
+  text-decoration: underline;
+  color: #003366;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+

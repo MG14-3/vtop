@@ -1,0 +1,34 @@
+.ParentButton {
+  background-color: #198754;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px 5px 6px;
+  transition: all 0.2s ease;
+}
+
+.ParentButton:hover {
+  background-color: #1557b0;
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+.ParentCard {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 25px 45px;
+  border-radius: 8px;
+  border-top: 4px solid #198754; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-width: 100px;
+  height: 45px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

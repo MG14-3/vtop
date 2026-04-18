@@ -1,0 +1,114 @@
+/* Centers the card horizontally and positions it towards the top */
+.login-container {
+  display: flex;
+  justify-content: center;
+  /* Changed from 'center' to 'flex-start' to move it up */
+  align-items: flex-start; 
+  
+  /* Removed margin-bottom: 100% - it was causing the "too low" or "missing" issue */
+  
+  /* Use padding-top to decide exactly how far down the card sits */
+  padding-top: 10vh; 
+  height: 100vh;
+  background-color: #ffffff;
+  box-sizing: border-box; /* Ensures padding doesn't add to the 100vh */
+}
+
+.vtop-login-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.vtop-header {
+  margin: 0;
+  padding: 12px 20px; /* Slightly tighter padding to match VTOP */
+  font-size: 1.15rem;
+  color: #333;
+  background-color: #f8f9fa; /* Subtle grey background for header */
+  border-bottom: 3px solid #5bc0de;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.vtop-form {
+  padding: 25px 40px;
+}
+
+.vtop-input-group {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.vtop-input-group input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline-color: #5bc0de;
+}
+
+.input-icon {
+  position: absolute;
+  right: 12px; /* Slight adjustment for alignment */
+  color: #1a73e8;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.red-icon {
+  color: #d9534f;
+}
+
+.vtop-submit-btn {
+  display: block;
+  margin-left: auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 25px; /* Slightly wider button */
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.vtop-submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.vtop-links {
+  padding: 0 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.left-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vtop-links a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.85rem;
+}
+
+.vtop-links a:hover {
+  text-decoration: underline;
+}
+
+.home-link {
+  font-style: italic;
+  color: #28a745 !important;
+  font-weight: 500;
+}
