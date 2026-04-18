@@ -1,15 +1,9 @@
 import React from 'react'
 import ParentLogo from '../assets/parent.png' 
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
 import '../styles/Parent.css'
 
 function Parent() {
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate('/parent-login');
-  };
 
   return (
         <div className="ParentCard">
@@ -19,7 +13,7 @@ function Parent() {
           
           <div className="rightSection">
             <h2 className="label">Parent</h2>
-            <button className="ParentButton" aria-label="Login" onClick={() => navigate('/parent-login')}>
+            <button className="ParentButton" aria-label="Login">
               <span className="arrowIcon"><FaArrowRightToBracket /></span>
             </button>
           </div>

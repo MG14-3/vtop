@@ -167,13 +167,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
   gap: 40px;
-  padding-bottom: 60px;
 }
 
 .menu-row-card {
   display: flex;
-  flex-direction: column;
   border:1px solid #3b83f6c4;
+  border-left: 10px solid var(--primary-blue);
+  gap: 20px;
   align-items: center;
   justify-content: center;
   padding: 18px 24px;
@@ -182,7 +182,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  min-height: 220px;
 }
 
 /* Give each card a unique hover color based on nth-child or logic */
@@ -193,17 +192,16 @@ body {
 }
 
 .row-icon {
-  width: 120px;
-  height: 120px;
-  background: var(--alice-blue);
+  width: 60px;
+  height: 60px;
+  background: #d0f3ffe0;
   color: var(--primary-blue);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5.6rem;
+  font-size: 2.6rem;
   transition: 0.3s;
-  margin-top:10%;
 }
 
 .menu-row-card:hover .row-icon {
@@ -215,8 +213,7 @@ body {
 .row-title {
   font-weight: 600;
   color: #334155;
-  padding-top:15%;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: bolder;
   text-align: center;
 

@@ -48,7 +48,6 @@ const Dashboard = () => {
           <div className="header-right">
             <span className="user-id">23BCE8236</span>
             <div className="user-avatar">
-
               <FaUser />
             </div>
           </div>
