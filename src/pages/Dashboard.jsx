@@ -1,23 +1,18 @@
-import React from "react";
+import React from "react"; 
 import {
-  FaGraduationCap,
-  FaBriefcase,
-  FaCircleInfo,
-  FaPaw,
-  FaBuildingColumns,
-  FaRegPaperPlane,
-  FaHouseChimney,
-  FaTrophy,
-  FaUser,
+  FaGraduationCap, FaBriefcase, FaCircleInfo, FaPaw,
+  FaBuildingColumns, FaRegPaperPlane, FaHouseChimney,
+  FaTrophy, FaUser,
 } from "react-icons/fa6";
 import { FaBook, FaRegMoneyBillAlt, FaRegDotCircle } from "react-icons/fa";
 import { BsShieldShaded } from "react-icons/bs";
 import "../styles/Dashboard.css";
 import vtopLogo from "../assets/vtop-logo-black.png";
 
+const Dashboard = ({ student, onLogout }) => {
+  // Safety check: if no student is passed, don't render anything
+  if (!student) return null;
 
-
-const Dashboard = () => {
   const menuItems = [
     { title: "My Info", icon: <FaBriefcase /> },
     { title: "Info Corner", icon: <FaCircleInfo /> },
@@ -42,19 +37,21 @@ const Dashboard = () => {
     <>
       <div className="dashboard-container">
         <header className="vtop-header">
-          <div className="header-left">
-            <img src={vtopLogo} alt="VIT-AP" className="header-logo" />
-          </div>
-          <div className="header-right">
-            <span className="user-id">23BCE8236</span>
-            <div className="user-avatar">
-              <FaUser />
+            <div className="header-left">
+              <img src={vtopLogo} alt="VIT-AP" className="header-logo" />
             </div>
-          </div>
+            <div className="header-right" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <span className="user-id">
+                {student.studentId}
+              </span>
+              <div className="user-avatar" style={{ cursor: 'pointer' }}>
+                <FaUser />
+              </div>
+            </div>
+
         </header>
 
         <section className="spotlight-section">
-          
           <div className="spotlight-bar">
             <div className="spotlight-tag">Spotlight</div>
             <div className="spotlight-track">
@@ -71,7 +68,10 @@ const Dashboard = () => {
         </section>
 
         <main className="dashboard-content">
-          <h2 className="section-title">Student Dashboard</h2>
+          <h2 className="section-title">
+            {student.name}'s Dashboard
+          </h2>
+          
           <div className="menu-list-layout">
             {menuItems.map((item, index) => (
               <div key={index} className="menu-row-card">
@@ -83,6 +83,7 @@ const Dashboard = () => {
           </div>
         </main>
       </div>
+      
       <div className="footer-container">
         VTOP-Replica | Portfolio Project | Developed by: Mangalam | VIT-AP University
       </div>

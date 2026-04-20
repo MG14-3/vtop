@@ -3,14 +3,29 @@ import "../styles/Login.css";
 import Header from "../components/Header";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaUserAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
+const Login = ({ setUser }) => {
+  const [studentId, setStudentId] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // 2. Initialize this
 
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Login attempt with:", email, password);
+    try {
+      const res = await axios.post("http://localhost:5000/users/login", {
+        studentId,
+        password,
+      });
+
+      if (res.data) {
+        setUser(res.data); // 3. Update App.jsx state
+        navigate("/dashboard"); // 4. Redirect to dashboard
+      }
+    } catch (err) {
+      alert("Invalid ID or Password");
+    }
   };
 
   return (
@@ -22,21 +37,33 @@ const Login = () => {
         <div className="vtop-login-card">
           <h2 className="vtop-header">VTOP Login</h2>
 
-          <form className="vtop-form">
+          <form className="vtop-form" onSubmit={handleLogin}>
+            {" "}
+            {/* 1. Add onSubmit */}
             <div className="vtop-input-group">
-              <input type="text" placeholder="Username" />
+              <input
+                type="text"
+                placeholder="Student ID"
+                value={studentId} // 2. Link state
+                onChange={(e) => setStudentId(e.target.value)} // 3. Update state
+                required
+              />
               <span className="input-icon">
                 <FaUserAlt />
               </span>
             </div>
-
             <div className="vtop-input-group">
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password} // 4. Link state
+                onChange={(e) => setPassword(e.target.value)} // 5. Update state
+                required
+              />
               <span className="input-icon">
                 <RiLockPasswordLine />
               </span>
             </div>
-
             <button type="submit" className="vtop-submit-btn">
               Submit
             </button>

@@ -35,7 +35,7 @@ body {
 .header-left {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
 }
 
@@ -55,9 +55,37 @@ body {
 }
 
 .header-logo {
-  height: 60px; /* Big Logo */
+  height: 80px; /* Big Logo */
   width: auto;
   margin-right: 40px;
+}
+
+/* Position the dropdown absolute to the header-right */
+.vtop-dropdown {
+  position: absolute;
+  top: 60px; /* Adjust based on your header height */
+  right: 0;
+  width: 220px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  padding: 8px 0;
+}
+
+.user-profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.user-profile-trigger:hover {
+  background: #f1f5f9;
 }
 
 .logo-divider {
